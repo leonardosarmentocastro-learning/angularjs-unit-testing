@@ -112,3 +112,43 @@ jasmine init
 ```
 karma start
 ```
+
+-----
+
+1. Add `angular-mocks` to your `bower.json` file:
+
+```
+bower install --save angular-mocks
+```
+
+-----
+# Writing your first test
+
+1. First, lets tell `jasmine` where our tests are by changing the `spec/support/jasmine.json` file content:
+
+From:
+```
+{
+  "spec_dir": "tests",
+  "spec_files": [
+    "**/*test.js"
+  ],
+  ...
+```
+
+To:
+```
+{
+  "spec_dir": "tests",
+  "spec_files": [
+    "**/*test.js"
+  ],
+  ...
+}
+```
+
+-----
+
+# Resource
+
+http://angulartestingquickstart.com/
