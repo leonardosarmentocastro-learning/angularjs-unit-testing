@@ -4,7 +4,7 @@
   angular
     .module('nodejs-client-quickstart')
     .service('HomeService', Service);
-  // HomeService.$inject = [];
+  Service.$inject = [];
 
   function Service() {
     var self = this;
