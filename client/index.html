@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="nodejs-client-quickstart">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Node.js Client Quickstart">
+  <meta name="author" content="lscastro - Leonardo Sarmento de Castro">
+
+  <title>Node.js Client Quickstart</title>
+
+  <!--
+  NOTE:
+    If your favicon doesn't update, change it's name to force google to
+    download it again.
+    <link rel="shortcut icon" href="/favicon-new.ico" type="image/x-icon">
+  -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- gulp-task: 'inject-own' -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="static/modules/core/css/core.css">
+  <!-- endinject -->
+
+  <!-- gulp-task: 'inject-vendor' -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+</head>
+
+<body>
+  <div ng-view></div>
+
+  <!-- gulp-task: 'inject-vendor' -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbower -->
+
+  <!-- gulp-task: 'inject-own' -->
+  <!-- inject:js -->
+  <script src="app/modules/core/app.js"></script>
+  <script src="app/modules/core/router.js"></script>
+  <script src="app/modules/home/controllers/home.controller.js"></script>
+  <script src="app/modules/home/services/home.service.js"></script>
+  <!-- endinject -->
+</body>
+</html>
