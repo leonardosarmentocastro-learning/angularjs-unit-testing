@@ -5,7 +5,9 @@
   "main": "bin/run.js",
   "scripts": {
     "start": "node bin/run.js",
-    "test": "mocha tests/unit --opts ./tests/mocha.opts"
+
+    "pretest": "npm install -g karma karma-cli",
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
     "karma": "^1.5.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.30",
     "karma-wiredep": "^1.0.3"
   }
 }
