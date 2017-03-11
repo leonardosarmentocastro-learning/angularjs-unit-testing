@@ -38,7 +38,7 @@ Enter empty string to move to the next question.
 
 Do you want Karma to watch all the files and run the tests on change ?
 Press tab to list possible options.
-> no
+> yes
 
 
 Config file generated at "/home/lscastro/workspace/leonardosarmentocastro/angularjs-unit-testing/karma.conf.js".
@@ -121,6 +121,55 @@ karma start
 bower install --save angular-mocks
 ```
 
+2. Add `karma-spec-reporter` to your project:
+
+```
+npm install karma-spec-reporter --save-dev
+```
+
+Then add 'spec' to reporters in `karma.conf.js`, e.g.
+```
+reporters: ['spec']
+```
+
+Its configuration stuff:
+```
+specReporter: {
+  maxLogLines: 5,             // limit number of lines logged per test
+  suppressErrorSummary: true, // do not print error summary
+  suppressFailed: false,      // do not print information about failed tests
+  suppressPassed: false,      // do not print information about passed tests
+  suppressSkipped: true,      // do not print information about skipped tests
+  showSpecTiming: false,      // print the time elapsed for each spec
+  failFast: true              // test would finish with error when a first fail occurs.  
+},
+```
+
+And define it as a `plugin`:
+
+```
+plugins: ["karma-spec-reporter"],
+```
+
+At the end of the process you will have something like this:
+```
+...
+  config.set({
+    ...
+      reporters: ["spec"],
+      specReporter: {
+        maxLogLines: 5,             // limit number of lines logged per test
+        suppressErrorSummary: true, // do not print error summary
+        suppressFailed: false,      // do not print information about failed tests
+        suppressPassed: false,      // do not print information about passed tests
+        suppressSkipped: true,      // do not print information about skipped tests
+        showSpecTiming: false,      // print the time elapsed for each spec
+        failFast: true              // test would finish with error when a first fail occurs.  
+      },
+      plugins: ["karma-spec-reporter"],
+    ...
+```
+
 -----
 # Writing your first test
 
@@ -152,3 +201,7 @@ To:
 # Resource
 
 http://angulartestingquickstart.com/
+https://github.com/yearofmoo-articles/AngularJS-Testing-Article
+
+https://docs.angularjs.org/guide/unit-testing
+https://github.com/angular/angular-seed
