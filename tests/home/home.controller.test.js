@@ -1,10 +1,10 @@
-const module = 'nodejs-client-quickstart';
+const app = 'nodejs-client-quickstart';
 
 describe('Home controller: ', function() {
   /**
    * Modules.
    */
-  beforeEach(module(module));
+  beforeEach(module(app));
 
   /**
    * Globals
@@ -25,7 +25,7 @@ describe('Home controller: ', function() {
       ctrl = $controller('HomeController', {
         HomeService: HomeService
       });
-    });
+    })
   );
 
   /**
